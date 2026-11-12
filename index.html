@@ -1,8 +1,466 @@
-<html>
-    <head>
-        <title>First webstie</title>
-    </head>
-    <body>
-       <p> Hello I'm a web developer</p>
-    </body>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maurya Nirwan | Personal Portfolio</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background: #0b1020;
+            color: #ffffff;
+            line-height: 1.6;
+        }
+
+        .container {
+            width: 85%;
+            max-width: 1150px;
+            margin: auto;
+        }
+
+        /* Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 25px 0;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+        }
+
+        .logo span {
+            color: #818cf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #aab2c5;
+            font-size: 14px;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #818cf8;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 80vh;
+            display: flex;
+            align-items: center;
+            padding: 70px 0;
+        }
+
+        .hero-content {
+            max-width: 750px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 8px 16px;
+            border: 1px solid #343d62;
+            border-radius: 30px;
+            color: #a5b4fc;
+            font-size: 13px;
+            margin-bottom: 25px;
+            background: #171e38;
+        }
+
+        .hero h1 {
+            font-size: clamp(42px, 7vw, 75px);
+            line-height: 1.1;
+            font-weight: 800;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            background: linear-gradient(90deg, #818cf8, #c084fc);
+            -webkit-background-clip: text;
+            color: transparent;
+        }
+
+        .hero p {
+            font-size: 17px;
+            color: #aab2c5;
+            max-width: 600px;
+            margin-bottom: 35px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 25px;
+            border-radius: 8px;
+            background: #6366f1;
+            color: white;
+            text-decoration: none;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .btn:hover {
+            background: #818cf8;
+            transform: translateY(-3px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid #454d70;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background: #1c2340;
+        }
+
+        /* General Sections */
+        section {
+            padding: 85px 0;
+        }
+
+        .section-title {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .section-title span {
+            color: #818cf8;
+        }
+
+        .section-description {
+            color: #aab2c5;
+            margin-bottom: 40px;
+            max-width: 650px;
+        }
+
+        /* About */
+        .about-box {
+            background: #141b30;
+            border: 1px solid #252e49;
+            padding: 35px;
+            border-radius: 15px;
+            color: #aab2c5;
+        }
+
+        .about-box p {
+            margin-bottom: 15px;
+        }
+
+        /* Skills */
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .skill-card {
+            background: #141b30;
+            border: 1px solid #252e49;
+            padding: 28px;
+            border-radius: 13px;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-6px);
+            border-color: #818cf8;
+        }
+
+        .skill-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .skill-card h3 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+
+        .skill-card p {
+            color: #aab2c5;
+            font-size: 14px;
+        }
+
+        /* Learning Journey */
+        .journey {
+            border-left: 2px solid #6366f1;
+            padding-left: 25px;
+        }
+
+        .journey-item {
+            position: relative;
+            margin-bottom: 30px;
+        }
+
+        .journey-item::before {
+            content: "";
+            position: absolute;
+            left: -32px;
+            top: 7px;
+            width: 12px;
+            height: 12px;
+            background: #818cf8;
+            border-radius: 50%;
+        }
+
+        .journey-item h3 {
+            margin-bottom: 7px;
+        }
+
+        .journey-item p {
+            color: #aab2c5;
+        }
+
+        /* Contact */
+        .contact-box {
+            background: linear-gradient(135deg, #202750, #312454);
+            border-radius: 18px;
+            padding: 50px 30px;
+            text-align: center;
+        }
+
+        .contact-box h2 {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        .contact-box p {
+            color: #c0c6dd;
+            margin-bottom: 25px;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid #252e49;
+            padding: 25px 0;
+            text-align: center;
+            color: #78839c;
+            font-size: 13px;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .container {
+                width: 90%;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 20px;
+            }
+
+            .nav-links {
+                gap: 17px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                min-height: 70vh;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title {
+                font-size: 27px;
+            }
+
+            .btn {
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Navigation -->
+        <nav>
+            <div class="logo">Maurya<span>.</span></div>
+
+            <ul class="nav-links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#skills">Interests</a></li>
+                <li><a href="#journey">Journey</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Hero -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <div class="tag">👋 Hello, welcome to my portfolio</div>
+
+                <h1>Hi, I'm <span>Maurya Nirwan.</span></h1>
+
+                <p>
+                    I'm a student passionate about learning English,
+                    exploring Artificial Intelligence, and discovering
+                    new technologies. I'm always curious and excited
+                    to learn something new.
+                </p>
+
+                <a href="#about" class="btn">Discover More</a>
+                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+            </div>
+        </section>
+
+        <!-- About -->
+        <section id="about">
+            <h2 class="section-title">About <span>Me</span></h2>
+
+            <p class="section-description">
+                A little introduction about who I am and what I enjoy learning.
+            </p>
+
+            <div class="about-box">
+                <p>
+                    My name is Maurya Nirwan. I am a student who believes
+                    that learning is a lifelong journey.
+                </p>
+
+                <p>
+                    Currently, I am focusing on improving my English
+                    communication skills and exploring the exciting world
+                    of Artificial Intelligence.
+                </p>
+
+                <p>
+                    I enjoy discovering new ideas, developing my knowledge,
+                    and challenging myself to become better every day.
+                    My goal is to turn what I learn into meaningful skills
+                    for the future.
+                </p>
+            </div>
+        </section>
+
+        <!-- Interests -->
+        <section id="skills">
+            <h2 class="section-title">My <span>Interests</span></h2>
+
+            <p class="section-description">
+                These are some of the areas I am currently interested in
+                and developing my knowledge of.
+            </p>
+
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <div class="skill-icon">🤖</div>
+                    <h3>Artificial Intelligence</h3>
+                    <p>
+                        Exploring AI tools, understanding how AI works,
+                        and discovering how it can make life easier.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">🌍</div>
+                    <h3>English Learning</h3>
+                    <p>
+                        Improving my English grammar, vocabulary,
+                        writing, and everyday communication skills.
+                    </p>
+                </div>
+
+                <div class="skill-card">
+                    <div class="skill-icon">💻</div>
+                    <h3>Technology</h3>
+                    <p>
+                        Exploring modern technology, digital tools,
+                        computers, and the future of innovation.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Learning Journey -->
+        <section id="journey">
+            <h2 class="section-title">My Learning <span>Journey</span></h2>
+
+            <p class="section-description">
+                Every day is an opportunity to learn and grow.
+            </p>
+
+            <div class="journey">
+
+                <div class="journey-item">
+                    <h3>📚 Improving English</h3>
+                    <p>
+                        Working on grammar, vocabulary, reading,
+                        and speaking to become a confident communicator.
+                    </p>
+                </div>
+
+                <div class="journey-item">
+                    <h3>🤖 Exploring AI</h3>
+                    <p>
+                        Learning about Artificial Intelligence and
+                        experimenting with different AI-powered tools.
+                    </p>
+                </div>
+
+                <div class="journey-item">
+                    <h3>🚀 Building My Future</h3>
+                    <p>
+                        Developing new skills, exploring opportunities,
+                        and preparing myself for the future.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Contact -->
+        <section id="contact">
+            <div class="contact-box">
+                <h2>Let's Connect!</h2>
+
+                <p>
+                    Have an interesting idea or want to connect?
+                    I'd love to hear from you.
+                </p>
+
+                <a href="mailto:your-email@example.com" class="btn">
+                    Contact Me ✉
+                </a>
+            </div>
+        </section>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2026 Maurya Nirwan. Made with curiosity and creativity.</p>
+    </footer>
+
+</body>
 </html>
