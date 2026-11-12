@@ -2,465 +2,879 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Maurya Nirwan | Personal Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<title>Maurya Nirwan | Portfolio</title>
 
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            scroll-behavior: smooth;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Inter', sans-serif;
-            background: #0b1020;
-            color: #ffffff;
-            line-height: 1.6;
-        }
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
 
-        .container {
-            width: 85%;
-            max-width: 1150px;
-            margin: auto;
-        }
+body {
+    font-family: 'Inter', sans-serif;
+    background: #0b1020;
+    color: white;
+    line-height: 1.6;
+}
 
-        /* Navigation */
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 25px 0;
-        }
+.container {
+    width: 85%;
+    max-width: 1150px;
+    margin: auto;
+}
 
-        .logo {
-            font-size: 24px;
-            font-weight: 800;
-            color: #ffffff;
-        }
+/* NAVIGATION */
 
-        .logo span {
-            color: #818cf8;
-        }
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 30px;
-            list-style: none;
-        }
+.logo {
+    font-size: 25px;
+    font-weight: 800;
+}
 
-        .nav-links a {
-            text-decoration: none;
-            color: #aab2c5;
-            font-size: 14px;
-            transition: 0.3s;
-        }
+.logo span {
+    color: #818cf8;
+}
 
-        .nav-links a:hover {
-            color: #818cf8;
-        }
+.nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+}
 
-        /* Hero Section */
-        .hero {
-            min-height: 80vh;
-            display: flex;
-            align-items: center;
-            padding: 70px 0;
-        }
+.nav-links a {
+    text-decoration: none;
+    color: #aab2c5;
+    font-size: 14px;
+}
 
-        .hero-content {
-            max-width: 750px;
-        }
+.nav-links a:hover {
+    color: #818cf8;
+}
 
-        .tag {
-            display: inline-block;
-            padding: 8px 16px;
-            border: 1px solid #343d62;
-            border-radius: 30px;
-            color: #a5b4fc;
-            font-size: 13px;
-            margin-bottom: 25px;
-            background: #171e38;
-        }
+/* BUTTONS */
 
-        .hero h1 {
-            font-size: clamp(42px, 7vw, 75px);
-            line-height: 1.1;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
+.btn {
+    display: inline-block;
+    padding: 13px 25px;
+    border-radius: 8px;
+    background: #6366f1;
+    color: white;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
 
-        .hero h1 span {
-            background: linear-gradient(90deg, #818cf8, #c084fc);
-            -webkit-background-clip: text;
-            color: transparent;
-        }
+.btn:hover {
+    background: #818cf8;
+    transform: translateY(-3px);
+}
 
-        .hero p {
-            font-size: 17px;
-            color: #aab2c5;
-            max-width: 600px;
-            margin-bottom: 35px;
-        }
+.btn-outline {
+    background: transparent;
+    border: 1px solid #454d70;
+    margin-left: 10px;
+}
 
-        .btn {
-            display: inline-block;
-            padding: 13px 25px;
-            border-radius: 8px;
-            background: #6366f1;
-            color: white;
-            text-decoration: none;
-            font-weight: 600;
-            transition: 0.3s;
-        }
+/* HERO */
 
-        .btn:hover {
-            background: #818cf8;
-            transform: translateY(-3px);
-        }
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    padding: 70px 0;
+}
 
-        .btn-outline {
-            background: transparent;
-            border: 1px solid #454d70;
-            margin-left: 10px;
-        }
+.hero-content {
+    max-width: 750px;
+}
 
-        .btn-outline:hover {
-            background: #1c2340;
-        }
+.tag {
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px solid #343d62;
+    border-radius: 30px;
+    color: #a5b4fc;
+    background: #171e38;
+    margin-bottom: 25px;
+    font-size: 13px;
+}
 
-        /* General Sections */
-        section {
-            padding: 85px 0;
-        }
+.hero h1 {
+    font-size: clamp(42px, 7vw, 75px);
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
 
-        .section-title {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+.hero h1 span {
+    background: linear-gradient(90deg, #818cf8, #c084fc);
+    -webkit-background-clip: text;
+    color: transparent;
+}
 
-        .section-title span {
-            color: #818cf8;
-        }
+.hero p {
+    color: #aab2c5;
+    font-size: 17px;
+    max-width: 600px;
+    margin-bottom: 30px;
+}
 
-        .section-description {
-            color: #aab2c5;
-            margin-bottom: 40px;
-            max-width: 650px;
-        }
+/* SECTIONS */
 
-        /* About */
-        .about-box {
-            background: #141b30;
-            border: 1px solid #252e49;
-            padding: 35px;
-            border-radius: 15px;
-            color: #aab2c5;
-        }
+section {
+    padding: 75px 0;
+}
 
-        .about-box p {
-            margin-bottom: 15px;
-        }
+.section-title {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-        /* Skills */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 20px;
-        }
+.section-title span {
+    color: #818cf8;
+}
 
-        .skill-card {
-            background: #141b30;
-            border: 1px solid #252e49;
-            padding: 28px;
-            border-radius: 13px;
-            transition: 0.3s;
-        }
+.section-description {
+    color: #aab2c5;
+    margin-bottom: 35px;
+    max-width: 650px;
+}
 
-        .skill-card:hover {
-            transform: translateY(-6px);
-            border-color: #818cf8;
-        }
+/* ABOUT */
 
-        .skill-icon {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+.about-box {
+    background: #141b30;
+    border: 1px solid #252e49;
+    padding: 35px;
+    border-radius: 15px;
+    color: #aab2c5;
+}
 
-        .skill-card h3 {
-            margin-bottom: 10px;
-            font-size: 18px;
-        }
+.about-box p {
+    margin-bottom: 15px;
+}
 
-        .skill-card p {
-            color: #aab2c5;
-            font-size: 14px;
-        }
+/* INTERESTS */
 
-        /* Learning Journey */
-        .journey {
-            border-left: 2px solid #6366f1;
-            padding-left: 25px;
-        }
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
 
-        .journey-item {
-            position: relative;
-            margin-bottom: 30px;
-        }
+.skill-card {
+    background: #141b30;
+    border: 1px solid #252e49;
+    padding: 28px;
+    border-radius: 13px;
+    transition: .3s;
+}
 
-        .journey-item::before {
-            content: "";
-            position: absolute;
-            left: -32px;
-            top: 7px;
-            width: 12px;
-            height: 12px;
-            background: #818cf8;
-            border-radius: 50%;
-        }
+.skill-card:hover {
+    transform: translateY(-6px);
+    border-color: #818cf8;
+}
 
-        .journey-item h3 {
-            margin-bottom: 7px;
-        }
+.skill-icon {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-        .journey-item p {
-            color: #aab2c5;
-        }
+.skill-card h3 {
+    margin-bottom: 10px;
+}
 
-        /* Contact */
-        .contact-box {
-            background: linear-gradient(135deg, #202750, #312454);
-            border-radius: 18px;
-            padding: 50px 30px;
-            text-align: center;
-        }
+.skill-card p {
+    color: #aab2c5;
+    font-size: 14px;
+}
 
-        .contact-box h2 {
-            font-size: 32px;
-            margin-bottom: 15px;
-        }
+/* JOURNEY */
 
-        .contact-box p {
-            color: #c0c6dd;
-            margin-bottom: 25px;
-        }
+.journey {
+    border-left: 2px solid #6366f1;
+    padding-left: 25px;
+}
 
-        /* Footer */
-        footer {
-            border-top: 1px solid #252e49;
-            padding: 25px 0;
-            text-align: center;
-            color: #78839c;
-            font-size: 13px;
-        }
+.journey-item {
+    margin-bottom: 30px;
+    position: relative;
+}
 
-        /* Mobile Responsive */
-        @media (max-width: 768px) {
-            .container {
-                width: 90%;
-            }
+.journey-item::before {
+    content: "";
+    position: absolute;
+    left: -32px;
+    top: 7px;
+    width: 12px;
+    height: 12px;
+    background: #818cf8;
+    border-radius: 50%;
+}
 
-            nav {
-                flex-direction: column;
-                gap: 20px;
-            }
+.journey-item p {
+    color: #aab2c5;
+}
 
-            .nav-links {
-                gap: 17px;
-                flex-wrap: wrap;
-                justify-content: center;
-            }
+/* CONTACT */
 
-            .hero {
-                min-height: 70vh;
-            }
+.contact-box {
+    background: linear-gradient(135deg, #202750, #312454);
+    border-radius: 18px;
+    padding: 50px 30px;
+    text-align: center;
+}
 
-            .skills-grid {
-                grid-template-columns: 1fr;
-            }
+.contact-box h2 {
+    font-size: 32px;
+    margin-bottom: 15px;
+}
 
-            .section-title {
-                font-size: 27px;
-            }
+.contact-box p {
+    color: #c0c6dd;
+    margin-bottom: 25px;
+}
 
-            .btn {
-                margin-bottom: 10px;
-            }
-        }
-    </style>
+/* FOOTER */
+
+footer {
+    border-top: 1px solid #252e49;
+    padding: 25px;
+    text-align: center;
+    color: #78839c;
+    font-size: 13px;
+}
+
+/* BEN 10 GAME POPUP */
+
+#ben10-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    background: rgba(0,0,0,.88);
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+#ben10-modal.active {
+    display: flex;
+}
+
+.ben10-window {
+    background: #101b16;
+    border: 2px solid #75ef4c;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 600px;
+    padding: 25px;
+    text-align: center;
+    color: white;
+    max-height: 90vh;
+    overflow-y: auto;
+    box-shadow: 0 0 35px rgba(117,239,76,.15);
+}
+
+#closeBen10 {
+    float: right;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 30px;
+    cursor: pointer;
+}
+
+.ben10-window h2 {
+    color: #75ef4c;
+    font-size: 27px;
+    margin: 15px 0;
+}
+
+.ben10-window p {
+    color: #b7c8ba;
+}
+
+.ben10-stats {
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    margin: 20px;
+}
+
+.ben10-stats strong {
+    color: #75ef4c;
+    font-size: 26px;
+}
+
+#ben10-target {
+    color: #a4ff79;
+    margin: 20px 0;
+}
+
+#ben10-board {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.ben10-alien {
+    height: 85px;
+    border-radius: 12px;
+    background: #1e3527;
+    border: 1px solid #47764b;
+    color: white;
+    font-size: 32px;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.ben10-alien:hover:not(:disabled) {
+    background: #365d3b;
+    transform: scale(1.05);
+}
+
+.ben10-alien:disabled {
+    opacity: .5;
+    cursor: default;
+}
+
+#ben10-start {
+    background: #75ef4c;
+    color: #10200e;
+    border: none;
+    padding: 13px 32px;
+    border-radius: 25px;
+    font-weight: 800;
+    cursor: pointer;
+    font-size: 15px;
+}
+
+#ben10-start:hover {
+    background: #a0ff79;
+}
+
+#ben10-message {
+    margin-top: 18px;
+    min-height: 25px;
+}
+
+/* MOBILE */
+
+@media(max-width:768px) {
+    .container {
+        width: 90%;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+
+    .btn {
+        margin-bottom: 10px;
+    }
+}
+
+@media(max-width:450px) {
+    .ben10-window {
+        padding: 15px;
+    }
+
+    .ben10-alien {
+        height: 75px;
+    }
+}
+</style>
 </head>
 
 <body>
 
-    <div class="container">
+<div class="container">
 
-        <!-- Navigation -->
-        <nav>
-            <div class="logo">Maurya<span>.</span></div>
+    <!-- NAVIGATION -->
 
-            <ul class="nav-links">
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#skills">Interests</a></li>
-                <li><a href="#journey">Journey</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
+    <nav>
+        <div class="logo">Maurya<span>.</span></div>
 
-        <!-- Hero -->
-        <section class="hero" id="home">
-            <div class="hero-content">
-                <div class="tag">👋 Hello, welcome to my portfolio</div>
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Interests</a></li>
+            <li><a href="#journey">Journey</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-                <h1>Hi, I'm <span>Maurya Nirwan.</span></h1>
+    <!-- HERO -->
 
-                <p>
-                    I'm a student passionate about learning English,
-                    exploring Artificial Intelligence, and discovering
-                    new technologies. I'm always curious and excited
-                    to learn something new.
-                </p>
+    <section class="hero" id="home">
 
-                <a href="#about" class="btn">Discover More</a>
-                <a href="#contact" class="btn btn-outline">Get In Touch</a>
+        <div class="hero-content">
+
+            <div class="tag">
+                👋 Hello, welcome to my portfolio
             </div>
-        </section>
 
-        <!-- About -->
-        <section id="about">
-            <h2 class="section-title">About <span>Me</span></h2>
+            <h1>
+                Hi, I'm <span>Maurya Nirwan.</span>
+            </h1>
 
-            <p class="section-description">
-                A little introduction about who I am and what I enjoy learning.
+            <p>
+                I'm a student passionate about learning English,
+                exploring Artificial Intelligence, and discovering
+                new technologies. I'm always curious and excited
+                to learn something new.
             </p>
 
-            <div class="about-box">
-                <p>
-                    My name is Maurya Nirwan. I am a student who believes
-                    that learning is a lifelong journey.
-                </p>
+            <a href="#about" class="btn">Discover More</a>
 
-                <p>
-                    Currently, I am focusing on improving my English
-                    communication skills and exploring the exciting world
-                    of Artificial Intelligence.
-                </p>
+            <a href="#contact" class="btn btn-outline">
+                Contact Me
+            </a>
 
-                <p>
-                    I enjoy discovering new ideas, developing my knowledge,
-                    and challenging myself to become better every day.
-                    My goal is to turn what I learn into meaningful skills
-                    for the future.
-                </p>
-            </div>
-        </section>
+            <button class="btn" id="openBen10Game"
+                style="background:#75ef4c;color:#10200e;margin-top:15px;">
+                👽 Play Ben 10 Game
+            </button>
 
-        <!-- Interests -->
-        <section id="skills">
-            <h2 class="section-title">My <span>Interests</span></h2>
+        </div>
+    </section>
 
-            <p class="section-description">
-                These are some of the areas I am currently interested in
-                and developing my knowledge of.
+    <!-- ABOUT -->
+
+    <section id="about">
+
+        <h2 class="section-title">
+            About <span>Me</span>
+        </h2>
+
+        <p class="section-description">
+            A little introduction about who I am and what I enjoy learning.
+        </p>
+
+        <div class="about-box">
+
+            <p>
+                My name is Maurya Nirwan. I am a student who believes
+                that learning is a lifelong journey.
             </p>
 
-            <div class="skills-grid">
-
-                <div class="skill-card">
-                    <div class="skill-icon">🤖</div>
-                    <h3>Artificial Intelligence</h3>
-                    <p>
-                        Exploring AI tools, understanding how AI works,
-                        and discovering how it can make life easier.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">🌍</div>
-                    <h3>English Learning</h3>
-                    <p>
-                        Improving my English grammar, vocabulary,
-                        writing, and everyday communication skills.
-                    </p>
-                </div>
-
-                <div class="skill-card">
-                    <div class="skill-icon">💻</div>
-                    <h3>Technology</h3>
-                    <p>
-                        Exploring modern technology, digital tools,
-                        computers, and the future of innovation.
-                    </p>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Learning Journey -->
-        <section id="journey">
-            <h2 class="section-title">My Learning <span>Journey</span></h2>
-
-            <p class="section-description">
-                Every day is an opportunity to learn and grow.
+            <p>
+                Currently, I am focusing on improving my English
+                communication skills and exploring the exciting world
+                of Artificial Intelligence.
             </p>
 
-            <div class="journey">
+            <p>
+                I enjoy discovering new ideas, developing my knowledge,
+                and challenging myself to become better every day.
+            </p>
 
-                <div class="journey-item">
-                    <h3>📚 Improving English</h3>
-                    <p>
-                        Working on grammar, vocabulary, reading,
-                        and speaking to become a confident communicator.
-                    </p>
-                </div>
+        </div>
+    </section>
 
-                <div class="journey-item">
-                    <h3>🤖 Exploring AI</h3>
-                    <p>
-                        Learning about Artificial Intelligence and
-                        experimenting with different AI-powered tools.
-                    </p>
-                </div>
+    <!-- INTERESTS -->
 
-                <div class="journey-item">
-                    <h3>🚀 Building My Future</h3>
-                    <p>
-                        Developing new skills, exploring opportunities,
-                        and preparing myself for the future.
-                    </p>
-                </div>
+    <section id="skills">
 
-            </div>
-        </section>
+        <h2 class="section-title">
+            My <span>Interests</span>
+        </h2>
 
-        <!-- Contact -->
-        <section id="contact">
-            <div class="contact-box">
-                <h2>Let's Connect!</h2>
+        <p class="section-description">
+            Areas I am currently interested in and learning about.
+        </p>
 
+        <div class="skills-grid">
+
+            <div class="skill-card">
+                <div class="skill-icon">🤖</div>
+                <h3>Artificial Intelligence</h3>
                 <p>
-                    Have an interesting idea or want to connect?
-                    I'd love to hear from you.
+                    Exploring AI tools and understanding how
+                    artificial intelligence works.
                 </p>
-
-                <a href="mailto:your-email@example.com" class="btn">
-                    Contact Me ✉
-                </a>
             </div>
-        </section>
+
+            <div class="skill-card">
+                <div class="skill-icon">🌍</div>
+                <h3>English Learning</h3>
+                <p>
+                    Improving my English grammar, vocabulary,
+                    writing and communication skills.
+                </p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h3>Technology</h3>
+                <p>
+                    Exploring modern technology, digital tools
+                    and the future of innovation.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- JOURNEY -->
+
+    <section id="journey">
+
+        <h2 class="section-title">
+            My Learning <span>Journey</span>
+        </h2>
+
+        <p class="section-description">
+            Every day is an opportunity to learn and grow.
+        </p>
+
+        <div class="journey">
+
+            <div class="journey-item">
+                <h3>📚 Improving English</h3>
+                <p>
+                    Working on grammar, vocabulary, reading
+                    and speaking.
+                </p>
+            </div>
+
+            <div class="journey-item">
+                <h3>🤖 Exploring AI</h3>
+                <p>
+                    Learning about Artificial Intelligence
+                    and experimenting with AI tools.
+                </p>
+            </div>
+
+            <div class="journey-item">
+                <h3>🚀 Building My Future</h3>
+                <p>
+                    Developing new skills and exploring
+                    opportunities for the future.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+
+    <section id="contact">
+
+        <div class="contact-box">
+
+            <h2>Let's Connect!</h2>
+
+            <p>
+                Have an interesting idea or want to connect?
+                I'd love to hear from you.
+            </p>
+
+            <a href="mailto:your-email@example.com" class="btn">
+                Contact Me ✉
+            </a>
+
+        </div>
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+
+<footer>
+    © 2026 Maurya Nirwan. Made with curiosity and creativity.
+</footer>
+
+
+<!-- BEN 10 GAME POPUP -->
+
+<div id="ben10-modal">
+
+    <div class="ben10-window">
+
+        <button id="closeBen10" aria-label="Close game">
+            &times;
+        </button>
+
+        <h2>👽 OMNITRIX CHALLENGE</h2>
+
+        <p>
+            Find the correct alien before time runs out!
+        </p>
+
+        <div class="ben10-stats">
+
+            <div>
+                <p>SCORE</p>
+                <strong id="ben10-score">0</strong>
+            </div>
+
+            <div>
+                <p>TIME LEFT</p>
+                <strong id="ben10-time">30</strong>
+            </div>
+
+        </div>
+
+        <h3 id="ben10-target">
+            Press Start to begin!
+        </h3>
+
+        <div id="ben10-board"></div>
+
+        <button id="ben10-start">
+            START GAME
+        </button>
+
+        <p id="ben10-message">
+            Are you ready to become a hero?
+        </p>
 
     </div>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2026 Maurya Nirwan. Made with curiosity and creativity.</p>
-    </footer>
+</div>
+
+
+<!-- GAME JAVASCRIPT -->
+
+<script>
+
+(() => {
+
+    const modal = document.getElementById("ben10-modal");
+
+    const openBtn =
+        document.getElementById("openBen10Game");
+
+    const closeBtn =
+        document.getElementById("closeBen10");
+
+    const aliens = [
+        { name: "Heatblast", emoji: "🔥" },
+        { name: "Four Arms", emoji: "💪" },
+        { name: "XLR8", emoji: "⚡" },
+        { name: "Diamondhead", emoji: "💎" },
+        { name: "Wildmutt", emoji: "🐾" }
+    ];
+
+    let score = 0;
+    let time = 30;
+    let target;
+    let playing = false;
+    let timer;
+
+    const board =
+        document.getElementById("ben10-board");
+
+    const scoreEl =
+        document.getElementById("ben10-score");
+
+    const timeEl =
+        document.getElementById("ben10-time");
+
+    const targetEl =
+        document.getElementById("ben10-target");
+
+    const message =
+        document.getElementById("ben10-message");
+
+    const startBtn =
+        document.getElementById("ben10-start");
+
+
+    // OPEN GAME
+
+    function openGame() {
+        modal.classList.add("active");
+    }
+
+    // CLOSE GAME
+
+    function closeGame() {
+        modal.classList.remove("active");
+        playing = false;
+        clearInterval(timer);
+    }
+
+    openBtn.addEventListener("click", openGame);
+
+    closeBtn.addEventListener("click", closeGame);
+
+    modal.addEventListener("click", function(e) {
+        if (e.target === modal) {
+            closeGame();
+        }
+    });
+
+    document.addEventListener("keydown", function(e) {
+        if (e.key === "Escape") {
+            closeGame();
+        }
+    });
+
+
+    // NEW ROUND
+
+    function newRound() {
+
+        target = aliens[
+            Math.floor(Math.random() * aliens.length)
+        ];
+
+        targetEl.textContent =
+            "🎯 Find: " + target.name + " " + target.emoji;
+
+        let choices = [];
+
+        for (let i = 0; i < 9; i++) {
+            choices.push(
+                aliens[Math.floor(Math.random() * aliens.length)]
+            );
+        }
+
+        // Ensure correct alien appears
+
+        choices[Math.floor(Math.random() * 9)] = target;
+
+        // Shuffle aliens
+
+        choices.sort(() => Math.random() - 0.5);
+
+        board.innerHTML = "";
+
+        choices.forEach(alien => {
+
+            const btn = document.createElement("button");
+
+            btn.className = "ben10-alien";
+            btn.textContent = alien.emoji;
+            btn.setAttribute("aria-label", alien.name);
+
+            btn.addEventListener("click", function() {
+
+                if (!playing) return;
+
+                if (alien.name === target.name) {
+
+                    score++;
+
+                    scoreEl.textContent = score;
+
+                    message.textContent =
+                        "✅ Correct! Great job!";
+
+                    newRound();
+
+                } else {
+
+                    message.textContent =
+                        "❌ Wrong alien! Try again!";
+
+                }
+
+            });
+
+            board.appendChild(btn);
+
+        });
+
+    }
+
+
+    // END GAME
+
+    function endGame() {
+
+        playing = false;
+
+        clearInterval(timer);
+
+        board.querySelectorAll("button").forEach(btn => {
+            btn.disabled = true;
+        });
+
+        targetEl.textContent =
+            "🏆 CHALLENGE COMPLETED!";
+
+        message.textContent =
+            "Your final score: " + score +
+            (score >= 15 ? " - Amazing hero!" : " - Keep practising!");
+
+        startBtn.textContent = "PLAY AGAIN";
+
+    }
+
+
+    // START GAME
+
+    function startGame() {
+
+        clearInterval(timer);
+
+        score = 0;
+        time = 30;
+        playing = true;
+
+        scoreEl.textContent = score;
+        timeEl.textContent = time;
+
+        message.textContent = "Find the correct alien!";
+
+        startBtn.textContent = "RESTART GAME";
+
+        newRound();
+
+        timer = setInterval(function() {
+
+            time--;
+
+            timeEl.textContent = time;
+
+            if (time <= 0) {
+                endGame();
+            }
+
+        }, 1000);
+
+    }
+
+    startBtn.addEventListener("click", startGame);
+
+})();
+
+</script>
 
 </body>
 </html>
